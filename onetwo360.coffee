@@ -245,25 +245,31 @@ if !isNodeJs
 
   #{{{3 test
   if runTest
+    console.log "run-test"
     testModel = deepCopy(defaultModel)
     ajax "./testdata/config.js", undefined,  (_, x) ->
       x = JSON.parse x
       console.log "here", x
       testModel.frames.normal.urls = []
       testModel.frames.zoom.urls = []
+      console.log "here";
+      testModel.frames.zoom.width = 2000
+      testModel.frames.zoom.height = 1495
+      testModel.width = testModel.frames.normal.width = 500
+      testModel.height = testModel.frames.normal.height = 373
       for o in x.files
-        testModel.frames.normal.urls.push "testdata/#{o.normal}"
-        testModel.frames.zoom.urls.push  "testdata/#{o.zoom}"
+        testModel.frames.normal.urls.push "#{o.normal}"
+        testModel.frames.zoom.urls.push  "#{o.zoom}"
         # rotationsbilleder solvognen
         # testapi.natmus.dk/v1/Search/?query=(sourceId:10999)%20AND%20(collection:DO) 
 
     do ->
-      testModel.frames.zoom.width = 1000
-      testModel.frames.zoom.height = 447
+      testModel.frames.zoom.width = 2000
+      testModel.frames.zoom.height = 1495
       #testModel.width = testModel.frames.normal.width = 1000
       #testModel.height = testModel.frames.normal.height = 447
       testModel.width = testModel.frames.normal.width = 500
-      testModel.height = testModel.frames.normal.height = 223
+      testModel.height = testModel.frames.normal.height = 373
       for i in [1..52] by 1
         #testModel.frames.normal.urls.push "/testdata/#{i}.jpg"
         testModel.frames.normal.urls.push "testdata/#{i}.normal.jpg"
