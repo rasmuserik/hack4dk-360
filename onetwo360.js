@@ -279,17 +279,60 @@
         return results;
       });
       (function() {
-        var i, j, results;
         testModel.frames.zoom.width = 2000;
         testModel.frames.zoom.height = 1495;
         testModel.width = testModel.frames.normal.width = 500;
         testModel.height = testModel.frames.normal.height = 373;
-        results = [];
-        for (i = j = 1; j <= 52; i = j += 1) {
-          testModel.frames.normal.urls.push("testdata/" + i + ".normal.jpg");
-          results.push(testModel.frames.zoom.urls.push("testdata/" + i + ".jpg"));
-        }
-        return results;
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11006/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10987/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10993/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10999/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11005/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10986/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10992/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10998/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11004/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10985/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10991/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10997/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11003/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10984/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10990/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10996/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11002/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10983/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10989/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10995/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11001/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11007/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10988/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/10994/image/500");
+        testModel.frames.normal.urls.push("http://samlinger.natmus.dk/DO/11000/image/500");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11006/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10987/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10993/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10999/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11005/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10986/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10992/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10998/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11004/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10985/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10991/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10997/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11003/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10984/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10990/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10996/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11002/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10983/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10989/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10995/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11001/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11007/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10988/image/2000");
+        testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/10994/image/2000");
+        return testModel.frames.zoom.urls.push("http://samlinger.natmus.dk/DO/11000/image/2000");
       })();
     }
   }
