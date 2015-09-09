@@ -246,6 +246,17 @@ if !isNodeJs
   #{{{3 test
   if runTest
     testModel = deepCopy(defaultModel)
+    ajax "./testdata/config.js", undefined,  (_, x) ->
+      x = JSON.parse x
+      console.log "here", x
+      testModel.frames.normal.urls = []
+      testModel.frames.zoom.urls = []
+      for o in x.files
+        testModel.frames.normal.urls.push "testdata/#{o.normal}"
+        testModel.frames.zoom.urls.push  "testdata/#{o.zoom}"
+        # rotationsbilleder solvognen
+        # testapi.natmus.dk/v1/Search/?query=(sourceId:10999)%20AND%20(collection:DO) 
+
     do ->
       testModel.frames.zoom.width = 1000
       testModel.frames.zoom.height = 447
@@ -738,8 +749,9 @@ if !isNodeJs
   window.onetwo360 = (cfg) ->
     return setTimeout (-> window.onetwo360 cfg), 100 if document.readyState != "complete"
     log "onetwo360 called", cfg
-    ajax "//embed.onetwo360.com/" + cfg.product_id, undefined, (err, data) ->
-      #ajax "testdata/config.js", undefined, (err, data) ->
+    #ajax "//embed.onetwo360.com/" + cfg.product_id, undefined, (err, data) ->
+    ajax "testdata/config.js", undefined, (err, data) ->
+      console.log "here"
       throw log "error loading embed data", cfg.product_id if err
       data = JSON.parse data
       log "got and parsed data", cfg.product_id
